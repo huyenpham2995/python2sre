@@ -1,7 +1,6 @@
 from absl.testing import absltest
 from absl.testing import parameterized
-from rotate import rotate_return
-
+from plusxy import findSum
 
 class UnitTests(parameterized.TestCase):
 	@parameterized.named_parameters(
@@ -19,7 +18,7 @@ class UnitTests(parameterized.TestCase):
       		})
 
 	def testSum(self, input1, input2, want):
-    		self.assertEqual(plus.FindSum(input1, input2), want)	
+    		self.assertEqual(findSum(input1, input2), want)	
 
 if __name__ == '__main__':
     absltest.main()
