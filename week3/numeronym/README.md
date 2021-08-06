@@ -1,11 +1,11 @@
 ### Question
 Validate is a word matches the provided numeronym. In this simple version, assume numerynom will start and end with a character
 The middle part of the numerynom will be digits
-a11y - accessibility -> True
-i18n -internationalization
-c1t - cat
-g2o - gato
-f4e- feline
+- a11y - accessibility -> True
+- i18n -internationalization
+- c1t - cat
+- g2o - gato
+- f4e- feline
 
 ### Thoughts
 - Input and output:
@@ -20,8 +20,11 @@ index 1 to n-2 (n being the length of the string) it will contain numbers.
     - When word is "", return False
 
 ### Pseudocode
-- If both numeronym and word are "", returns True. If one of them is "" and the other is not, return False
+- If word is "" return False
 - If both of them are not ""
-    - Is numeronym in the correct format? (i.e: start and end with a letter)
-    - 
+    - Check to see if first and last characters of numeronym match with first and last characters of word.
+        - If match:
+            - Convert the numeronym (excluding the first and last characters) into int => expected length from word
+            - Check to see if the length of word (excluding the first and last characters) is the same with the expected length
+        - If not, return False
     
