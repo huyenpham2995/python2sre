@@ -20,10 +20,13 @@ def testDifferentLength():
 
 def testNumberWithMoreThanOneDigit():
     assert verifyNumeronymPlus("ab10c", "abaaaaaaaaaac") == True
-    assert verifyNumeronymPlus("ab03c", "abaaac") == False
+    assert verifyNumeronymPlus("ab03c", "abaaac") == True
 
 def testNumberInDifferentPlaces():
-    assert verifyNumeronymPlus("f1l1ne", "feline") == False
+    assert verifyNumeronymPlus("f1l1ne", "feline") == True
+    assert verifyNumeronymPlus("f12l1ne", "feeeeeeeeeeeeline") == True
+    assert verifyNumeronymPlus("f12l10ne", "feeeeeeeeeeeeliiiiiiiiiine") == True
+    assert verifyNumeronymPlus("f1l1ne", "felne") == False
 
 def testMoreThanOneLetter():
     assert verifyNumeronymPlus("ab1c", "abcc") == True

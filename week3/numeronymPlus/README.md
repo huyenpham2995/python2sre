@@ -14,9 +14,15 @@ An upgraded version of numeronym. Validate is a word matches the provided numero
         - If the current character is a number, grab all the number that goes together consecutively. 
             - For example: "a123b", we detect 1, then keep going until there's no number anymore (keep the numbers in `expectedLength`). Then convert that `expectedLength` into a string. In this example, `expectedLength = 123`
             - If the length of `word` from current position to the end is less than the `expectedLength`, i.e it does not match => return False
-    - When we traverse through every character of the `numerynom` but we have not reached the end of `word`, i.e `word` is longer than `numerynom` => return False
+    - When we traverse through every character of the `numerynom` but we have not reached the end of `word`, i.e `word` is longer than `numerynom` => return False (vice versa)
     - When we have reached the end, everything passed => return True
 - Edge case(s):
     - When both word and numeronym are "", return True
     - When word is "" but numeronym is not (and vice versa), return False
     - When numeronym does not begin or end with a letter, return False (invalid)
+
+### BigO
+- Let the length of word be N and numeronym be M
+    - The loop goes through the length of word or numeronym, whichever one is shorter, so it's O(N) assuming N < M
+- Space complexity:
+    - Keep track of position using index i and j, so O(1)
