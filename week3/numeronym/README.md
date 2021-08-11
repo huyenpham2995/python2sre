@@ -27,4 +27,8 @@ index 1 to n-2 (n being the length of the string) it will contain numbers.
             - Convert the numeronym (excluding the first and last characters) into int => expected length from word
             - Check to see if the length of word (excluding the first and last characters) is the same with the expected length
         - If not, return False
+
+### BigO
+- Time complexity: only 1 if statement to compare the beginning and the end character of word and numeronym => O(1)
+- Space complexity: no extra space used => O(1)
     
