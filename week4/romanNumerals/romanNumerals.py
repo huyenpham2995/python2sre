@@ -19,9 +19,11 @@ def romanNumerals(string):
     cur = 0
 
     while cur < len(string):
+        # invalid if character does not exist in the dictionary
         if romanNumeralsDict[string[cur].upper()] == 0:
             return None
 
+        # first character will be added to the result sum automatically
         if cur == 0:
             result += romanNumeralsDict[string[cur].upper()]
         else:

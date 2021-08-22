@@ -16,5 +16,17 @@
     - If the input contains a letter/character that does not have any value in roman numerals dictionary, that's an invalid string.
 
 ### Pseudocode
+1. Create a dictionary of roman numerals.
+2. Check to see if the string is empty, if it is then invalid, return None
+3. Go through each character in the string, convert them to uppercase:
+    - If the letter does not exist in the dictionary, that's invalid => None
+    - If current roman numerals value >= the previous one, just add it to the result sum.
+    - If current roman numerals value < the previous one
+        - Deduct the previous value from the sum (reset sum) to avoid it is being considered twice.
+        - Take the current value - previous value (eg: IV = 5 - 1 = 4)
+        - Add that value just calculated to the sum (sum = sum + 4)
+    - Update index.
 
 ### BigO
+- Go through the string once => Time complexity O(N) (N being the length of the string).
+- Have a dictionary of a fixed size for roman numerals, only keeping track of 2 value at the same time (current and previous value) => space complexity O(1).
