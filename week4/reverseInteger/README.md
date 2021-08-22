@@ -16,12 +16,12 @@
 ### Pseudocode
 1. If string is empty, return string.
 2. Traverse the original string in reverse order:
-    2.1. If a comma is detected, flip the flag to True.
-    2.2 Else it's a number, just add to the result.
+    - If a comma is detected, flip the flag to True.
+    - Else it's a number, just add to the result.
 3. Convert the result into an int to eliminate the 0(s) if any, then convert it back to a string.
 4. Add back the comma(s):
-    4.1. If result string is less than 4 digits, no comma needed.
-    4.2. Adding the comma for every 3 digit, starting from the end of result string.
+    - If result string is less than 4 digits, no comma needed.
+    - Adding the comma for every 3 digit, starting from the end of result string.
 
 ### BigO
 - Traverse the orignal string => time complexity O(N) (N being the length of the original string).
