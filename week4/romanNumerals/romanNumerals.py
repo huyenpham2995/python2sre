@@ -1,12 +1,4 @@
-from collections import defaultdict
-romanNumeralsDict = defaultdict(int)
-romanNumeralsDict["I"] = 1
-romanNumeralsDict["V"] = 5
-romanNumeralsDict["X"] = 10
-romanNumeralsDict["L"] = 50
-romanNumeralsDict["C"] = 100
-romanNumeralsDict["D"] = 500
-romanNumeralsDict["M"] = 1000
+romanNumeralsDict= {"I":1, "V":5, "X":10, "L":50, "C": 100, "D":500, "M":1000}
 
 def romanNumerals(string):
     # Empty string is invalid
@@ -15,26 +7,27 @@ def romanNumerals(string):
     
     # If there's only 1 letter, see if the letter is valid. 
     # If it is return the value
+    string = string.upper()
     result = 0
-    cur = 0
+    index = 0
 
-    while cur < len(string):
+    while index < len(string):
         # invalid if character does not exist in the dictionary
-        if romanNumeralsDict[string[cur].upper()] == 0:
+        if string[index] not in romanNumeralsDict.keys():
             return None
 
         # first character will be added to the result sum automatically
-        if cur == 0:
-            result += romanNumeralsDict[string[cur].upper()]
+        if index == 0:
+            result += romanNumeralsDict[string[index]]
         else:
-            prevNum = romanNumeralsDict[string[cur-1].upper()]
-            curNum = romanNumeralsDict[string[cur].upper()]
+            prevNum = romanNumeralsDict[string[index-1]]
+            curNum = romanNumeralsDict[string[index]]
             if prevNum < curNum:
                 result -= prevNum
                 result += curNum - prevNum
             else:
                 result += curNum 
 
-        cur += 1    
+        index += 1    
 
     return result
