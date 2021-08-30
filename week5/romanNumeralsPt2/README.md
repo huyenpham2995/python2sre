@@ -29,5 +29,17 @@
         - Return 6.
 
 ### Pseudocode
+1. Traverse each character in the string from left to right.
+2. First character is added automatically to the result sum.
+3. Compares the current char to the previous char:
+    - If current char < previous char: just add current char value to the sum
+    - Else:
+        - If current char > result sum: new result sum = current char value - result sum.
+        - Else if current char > previous char:
+            - Deduct previous char from result (so we don't take into account the previous char twice).
+            - result = result + current char - previous char
+4. Update index position and repeat step 3 until reaching the end of the string.
 
 ### BigO
+- We traverse the string once => time complexity O(N) (N is the length of the input).
+- Only use 2 variable to keep track of the value of current and previous characters, 1 more to keep track of the current index => space complexity O(1).
