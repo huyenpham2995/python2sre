@@ -8,7 +8,10 @@
 - Example: [1,2,3,4] -> [4,3,2,1]. Read from the last element to the first element.
 - The first element becomes the last one, the 2nd one becomes the 2nd to the last and so on.
 - Can go through the list from the end to the beginning, append each element to a new list and return that new list.
-- Since the 1st become the last, I can actually swap their position. Same thing goes to 2nd and 2nd to the last, etc. No new list needs to be created. Done with the swap when element(s) in the middle of list are swapped.
+- Since the 1st become the last, I can actually swap their position. Same thing goes to 2nd and 2nd to the last, etc. No new list needs to be created. Done with the swap when element(s) in the middle of list are swapped. Eg: [1,2,3,4,5,6]
+    - [6,2,3,4,5,1] 
+    - [6,5,3,4,2,1]
+    - [6,5,4,3,2,1]
 - Special cases: if the list is empty or has 1 element, just return an empty list.
 
 ### Pseudocode
