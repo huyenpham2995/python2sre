@@ -7,10 +7,10 @@ def testEmptyString():
 def testOneLetter():
     assert largestPalindrome("a") == "a"
 
-def testOddString():
-    assert largestPalindrome("banana") == "anana"
+@pytest.mark.parametrize("testInput,expected", [("banana", "anana"), ("hh", "hh")])
+def testPalindrome(testInput, expected):
+    assert largestPalindrome(testInput) == expected
 
-def testEvenString():
-    assert largestPalindrome("hh") == "hh"
+
 
  
