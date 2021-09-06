@@ -49,3 +49,5 @@
 4. Return result
 
 ### BigO
+- In the worst case scenerio (N=1), go through every elements in the master list => time complexity O(n) (n is the length of the master list). 
+- In the worst case scenerio (N=1), created n buckets which are contain in the result list => O(n) (n is the length of the master list). 
