@@ -1,5 +1,5 @@
 ### Question
-- Roman numerals can now follow the format IC(99) or XVIC(84)
+- Roman numerals can now follow the format IC(99) or XVIC(84) 
 
 ### Thoughts
 - Input and output:
