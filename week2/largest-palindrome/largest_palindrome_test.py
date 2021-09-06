@@ -1,15 +1,18 @@
 import pytest
 from largest_palindrome import largestPalindrome
 
-def testEmptyString():
-    assert largestPalindrome("") == ""
+@pytest.mark.parametrize("input", [123,121])
+def testInvalidInput(input):
+    with pytest.raises(TypeError):
+        largestPalindrome(input)
 
-def testOneLetter():
-    assert largestPalindrome("a") == "a"
+@pytest.mark.parametrize("input,expected", [("banana", "anana"),
+                                                ("hh", "hh"),
+                                                ("a", "a"),
+                                                ("","")])
+def testPalindrome(input, expected):
+    assert largestPalindrome(input) == expected
 
-@pytest.mark.parametrize("testInput,expected", [("banana", "anana"), ("hh", "hh")])
-def testPalindrome(testInput, expected):
-    assert largestPalindrome(testInput) == expected
 
 
 
