@@ -24,4 +24,4 @@
 
 ### BigO
 - No loop, only going through some if statement with a number => time complexity O(1).
-- Keep track of the number and result => space complexity O(1.)
+- Keep track of the number and result => space complexity O(1)
