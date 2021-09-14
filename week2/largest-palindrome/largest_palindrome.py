@@ -1,7 +1,7 @@
 # Function to find the largest palindrome substring in a string
 # s: original string
 # return largest palindrome substring
-def largestPalindrome(s: str) -> str:
+def largest_palindrome(s: str) -> str:
     # raising 2 exceptions for input is not a string
     if not isinstance(s, str):
         raise TypeError("Expecting string")

@@ -1,20 +1,20 @@
 import pytest
-from fibonacci import findNthFibonacci
+from fibonacci import find_nth_fibonacci
 
 def testNegativeN():
-    assert findNthFibonacci(-1) == None
+    assert find_nth_fibonacci(-1) == None
 
 def testZero():
-    assert findNthFibonacci(0) == None
+    assert find_nth_fibonacci(0) == None
 
 def testNNotInteger():
-    assert findNthFibonacci(2.5) == None
+    assert find_nth_fibonacci(2.5) == None
 
 def testFirstFibonnaci():
-    assert findNthFibonacci(1) == 0
+    assert find_nth_fibonacci(1) == 0
 
 def testSecondFibonnaci():
-    assert findNthFibonacci(2) == 1
+    assert find_nth_fibonacci(2) == 1
 
 def testValidN():
-    assert findNthFibonacci(6) == 5
+    assert find_nth_fibonacci(6) == 5

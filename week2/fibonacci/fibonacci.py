@@ -1,6 +1,6 @@
 # Input: n (int) - the position of the fibonacci number
 # Output: the nth fibonacci number
-def findNthFibonacci(n):
+def find_nth_fibonacci(n):
     # Invalid index
     if n < 1 or not isinstance(n, int):
         return None
@@ -12,19 +12,19 @@ def findNthFibonacci(n):
         return 1
 
     # store all fibonacci numbers that have been found
-    fibArr = [0, 1]
-    return findNthFibonacciHelper(n, fibArr)
+    fib_arr = [0, 1]
+    return find_nth_fibonacci_helper(n, fib_arr)
 
 
 # Recursive function to find the nth fibonacci number
 # Input: 
 #       n (int) - the position of the fibonacci number
 #       fib_arr (array of integers) - the array which stores the fibonacci #s that have been found
-def findNthFibonacciHelper(n, fibArr):
-    if n <= len(fibArr):
-        return fibArr[n-1]
+def find_nth_fibonacci_helper(n, fib_arr):
+    if n <= len(fib_arr):
+        return fib_arr[n-1]
     
-    fibN = findNthFibonacciHelper(n-1, fibArr) + findNthFibonacciHelper(n-2, fibArr)
-    fibArr.append(fibN)
+    fib_n = find_nth_fibonacci_helper(n-1, fib_arr) + find_nth_fibonacci_helper(n-2, fib_arr)
+    fib_arr.append(fib_n)
 
-    return fibN
+    return fib_n

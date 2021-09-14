@@ -1,4 +1,4 @@
-def verifyNumeronymPlus(numeronym, word):
+def verify_numeronym_plus(numeronym, word):
     # both "" or one of the input is ""
     if numeronym == "":
         # if both are "" => True
