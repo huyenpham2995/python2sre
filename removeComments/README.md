@@ -26,7 +26,7 @@
 1.  Create an array to store the valid lines. Create a boolean falg to keep track of """. Boolean sets to False.
 2.  Open file with try-except to make sure it is valid.
 3.  Read each line of file\
-    3.1.    If line starts or ends with """
+    3.1.    If line starts or ends with """\
         3.1.1.  If there are odd number of """ in the line, set boolean flag to its negate value.\
     3.2.    Else if boolean is False and the line does not start with #, add the line into the valid lines array
 4.  Write the valid array to the output file
