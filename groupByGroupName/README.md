@@ -15,12 +15,12 @@ Note: there's a command line to do this "sort -t' ' -k2 filename", but we want y
 
 ### Pseudocode
 1. Try to open the file with file name. If not valid -> abort.
-2. Read the file
-    2.1. At each line, split the line with space a delim (this will be an array). If array length != 4 -> throw exception.
-    2.2. If array length == 4, add an entry to the dictionary with the 2nd element (groupname) as key and the value is an array of array (line after being split).
+2. Read the file\
+    2.1. At each line, split the line with space a delim (this will be an array). If array length != 4 -> throw exception.\
+    2.2. If array length == 4, add an entry to the dictionary with the 2nd element (groupname) as key and the value is an array of array (line after being split).\
 3. Sort the dictionary by key
-4. Loop through all elements of the dictionary:
-    4.1. If a key contains multiple value, sort by 3rd element (username)
+4. Loop through all elements of the dictionary:\
+    4.1. If a key contains multiple value, sort by 3rd element (username)\
     4.2. Join the array by space and write to output file.
 
 ### BigO
