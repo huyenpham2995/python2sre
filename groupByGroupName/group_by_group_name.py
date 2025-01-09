@@ -1,2 +1,2 @@
-def groupByGroupName():
+def groupByGroupName(inputFileName: str):
     return
