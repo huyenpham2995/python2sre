@@ -18,10 +18,10 @@
     4.1.    Set the header of the output file first. Set num=1 (for asset ID).\
     4.2.    Sort the dictionary by key (model number). Loop through all items\
         4.2.1.  Sort the value of assets[model] by the 1st element of the value array (date in datetime format). Loop through each value\
-            a.  Format the assetID string (a string of 6 character, contains the num).\
-            b.  Append the asset ID + model# (key) + assets[model][1:] (skip the date in datetime, which is in index 0)\
-            c.  Join them with " " as delimeter and write it to output file.\
-            d.  Increment the ID number.
+            - Format the assetID string (a string of 6 character, contains the num).\
+            - Append the asset ID + model# (key) + assets[model][1:] (skip the date in datetime, which is in index 0)\
+            -   Join them with " " as delimeter and write it to output file.\
+            -   Increment the ID number.
 
 ### BigO
 - Looping through all lines of input file: O(N)
