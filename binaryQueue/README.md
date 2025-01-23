@@ -17,9 +17,20 @@ b10 13:05:24 10/15/2020 failed
 please update the file by removing the binaries that are completed (succeeded or failed) and moving all the queued binaries to the top of file (sorted by creation time)
 
 ### Thoughts
-
+- Only kept line when the status is `running` or `queued`
+- Did to convert the string to datetime object to sort.
+- Use dictionary with time as key, the whole line as value.
+- Can time be exactly the same? If yes, the value should be an array.
 
 ### Pseudocode
-
+- Check file validity
+- Go through each line:
+    - Split line by space.
+    - Pass if status is `failed` or `succeeded`.
+    - Else add the line into the dictionary, with element 1 + 2 as key and the whole line as value.
+- Sort the dictionary by key
+- Write to output file
 
 ### BigO
+- Go through each line: O(N)
+- Sort dictionary: O(NlogN)
