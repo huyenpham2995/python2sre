@@ -20,7 +20,26 @@ Note:
 3) disregard processes that never exit
 
 ### Thoughts
+- All scenerio that can happen:
+    - Start -> pause: time = pause - start
+    - Start -> exit: time = exit - start
+    - Pause -> resume: don't count time
+    - Pause -> exit: don't count time
+    - Resume -> pause: time = pause - resume
+    - Resume -> exit: time = exit - resume
+- Imagine there's a timeline array of the process run. Things will work like this
+    - Encounter a start: add to the timeline
+    - Encounter a pause: caluculate time from start to pause, then remove the start time (as we have done with it). Don't do anything with this pause because we don't count this time.
+    - Encounter a resume: add to the timeline
+    - Encounter an exit: calculate time from exit to start/resume. Write to output
 
 ### Pseudocode
+- Keep 2 dictionaries: 1 to record the "current start time", the other for time it has been running
+- Read through all lines
+    - If time starts or resumes, add the time to current start time.
+    - If time pause or exit, calculate the time from this moment to the current start time recorded.
+    - If time exit, write to output file.
 
 ### BigO
+- Go through all the lines once to do add/calculate operation -> O(N)
+- 2 dictionaries -> O(2N) -> O(N)
