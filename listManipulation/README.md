@@ -17,8 +17,7 @@ a = [1, 2, 3]
 b = [2, 4, 6]
 left_lists(a, b) # [1, 3]
 
-### Thoughts
-
-### Pseudocode
-
 ### BigO
+- Xor: O(a+b)
+- And: O(a+b)
+- Left: O(a+b) (questionable because of the removing item part, which means it has to be searched.)
