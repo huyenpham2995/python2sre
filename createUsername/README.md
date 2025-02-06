@@ -30,7 +30,12 @@ Harun Wu 10 10/22/2000 hwu
 ```
 
 ### Thoughts
-
-### Pseudocode
+- Read the input file and write to output file at the same time
+- Work with the assumptions
+    - There's only first name + last name (no middle name)
+    - No username is duplicated
+- String manipulation (get first letter of first name, append to last name) and turn everything to lowercase
 
 ### BigO
+- Read all lines of the file and write to output file at the same time -> O(N) time complexity
+- Process a line at a time, only keep an array of 5 elements -> O(1) space complexity
