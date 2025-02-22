@@ -12,3 +12,6 @@ def testIsPangram():
     
 def testNotPangram():
     assert is_pangrams("We promptly judged antique ivory buckles for the prize") == "not pangram"
+
+def testSpecialChar():
+    assert is_pangrams("We promptly judged antique ivory buckles for the prize $%") == "not pangram"
