@@ -1,9 +1,6 @@
 import pytest
 from pangrams import is_pangrams
 
-a = [1, 2, 3]
-b = [2, 4, 6]
-
 def testEmpty():
     assert is_pangrams("") == "not pangram"
 
