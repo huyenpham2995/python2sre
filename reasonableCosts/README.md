@@ -29,7 +29,8 @@ Date City Cost Recommended
 - Output: the lines sorted by date where cost is between $20 and $50, and recommended is Yes
 
 ### Thoughts
-
-### Pseudocode
+- Read each line, convert the money to float and only keep the lines that satisfy the condition, then sort the list of qualified lines by dates.
 
 ### BigO
+- Time Complexity: read through all lines O(N), sort by date O(NlogN) -> O(NlogN)
+- Space Complexity: at most O(N) (if all lines qualified)
