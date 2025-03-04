@@ -30,5 +30,13 @@ Note:
 
 ### Thoughts
 
+Valid IP: there arr 4 groups of numbers in a valid IPv4 (all < 255, no leading 0), same condition
+- Just 1 digit, from 0-9
+- Or 2 digits, first digit from 1-9 (cant have leading 0), second digit 0-9
+- Or 3 digits
+    - First digit 1, the last 2 0-9
+    - First digit 2, 2nd digit 0-4, third digit 0-9
+    - First digit 2, second digit 5, third digit 0-5
+
 ### BigO
 
