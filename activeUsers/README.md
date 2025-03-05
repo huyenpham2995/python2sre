@@ -46,3 +46,5 @@ username (xxx) xxx-xxxx
 ## Thoughts
 
 ## BigO
+
+O(A+B)
